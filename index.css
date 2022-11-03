@@ -132,7 +132,7 @@ button:hover{
 
 .content{
     display: flex;
-    padding: 100px 50px;
+    padding: 50px 100px;
     justify-content: space-around;
 }
 
@@ -144,4 +144,55 @@ button:hover{
 
 img{
     width: 150px;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th,td {
+    height: 50px;
+  }
+
+.grey{
+    background-color: rgba(200, 200, 200, 0.659);
+}
+
+.rotate {
+    transform: rotate(-90deg);
+  
+  
+    /* Legacy vendor prefixes that you probably don't need... */
+  
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+  
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+  
+    /* IE */
+    -ms-transform: rotate(-90deg);
+  
+    /* Opera */
+    -o-transform: rotate(-90deg);
+  
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  
+  }
+
+  .table{
+    padding: 50px 100px;
+    text-align: center;
+  }
+
+  .list
+{
+    display: flex;
+    justify-content: space-evenly;
 }
