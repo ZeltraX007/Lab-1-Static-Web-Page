@@ -223,6 +223,49 @@
         </div>
       </div>
 
+      <div class="audio">
+        <audio controls autoplay>
+          <source src="JohnLennon-Imagine.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio> 
+        <audio controls autoplay>
+          <source src="JohnLennon-Imagine.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio> 
+        <audio controls autoplay>
+          <source src="JohnLennon-Imagine.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio> 
+        <audio controls autoplay>
+          <source src="JohnLennon-Imagine.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio> 
+      </div>
+
+      <div class="video">
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/rCA-eNxwY4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/SWY2C6imC78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/rCA-eNxwY4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/SWY2C6imC78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    <div style="display: flex; justify-content: space-around;padding: 20px;">
+      <h3>internet is not secure</h3>
+      <button onclick="getLocation()">Try it</button>
+      <p id="location"></p>
+    </div>
+
+    <div class="canvas"><canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas></div>
+
+    <div class="container py-5">  
+      <h4><span class="text-danger">date</span> input type in html 5</h4>  
+      <form>  
+          <div class="form-group">  
+              <label>Date:</label>  
+              <input type="date" id="date" class="form-control col-md-3" />  
+          </div>  
+      </form>    
+    </div>   
     <script>
         let modalBtns = [...document.querySelectorAll(".openButton")];
       modalBtns.forEach(function (btn) {
@@ -243,6 +286,26 @@
           event.target.style.display = "none";
         }
       };
+
+      var x = document.getElementById("location");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.fillText("Hello World", 10, 50);
     </script>
     
 </body>

@@ -196,3 +196,28 @@ th,td {
     display: flex;
     justify-content: space-evenly;
 }
+
+.audio{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.audio audio{
+  border-radius: 20px;
+}
+
+.video{
+  display: flex;
+  justify-content: space-around;
+}
+
+.video iframe{
+  padding: 10px;
+}
+
+.canvas{
+  display: flex; 
+  justify-content: center;
+  padding: 20px;
+}
